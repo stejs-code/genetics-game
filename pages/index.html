@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amongus</title>
+    <script defer src="/index.js"></script>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+<img src="/amogus" alt="" width="100%">
+<main>
+
+    <div id="canvas">
+        <div id="player" class="">
+
+        </div>
+        <div id="flowers">
+
+        </div>
+        <div id="labels">
+
+        </div>
+    </div>
+
+</main>
+
+<script>
+    var imgs = [];
+
+    function preload(fileNames)
+    {
+        for(var i=1; i<14; i++)
+        {
+            fileNames.forEach(fileName =>{
+                imgs[i] = new Image();
+                imgs[i].src = window.location.href + fileName
+            })
+
+        }
+
+    }
+    preload(["leaves.webp", "player_left.png", "player_left_1.webp",
+             "player_left_2.webp", "player_right.png", "player_right_1.webp",
+             "player_right_2.webp", "stem.webp", "flower/small/red.png"])
+</script>
+</body>
+</html>
